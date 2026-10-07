@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Free Image Compressor</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+    <header>
+      <h1><span id="yellow">Free</span> Image Compressor</h1>
+      <p class="subtitle">
+        Compress JPEG, PNG, and WebP images locally in your browser. Fast, private, and free.
+      </p>
+    </header>
+
+    <!-- Upload Section -->
+    <section>
+      <h2 class="section-title">1. Upload Images</h2>
+      <div class="dropzone" id="dropzone">
+        <div class="dropzone-title">Drag & drop images here</div>
+        <div class="dropzone-hint">or click to choose files from your device</div>
+        <input type="file" id="fileInput" multiple accept="image/*" style="display:none" />
+      </div>
+    </section>
+
+    <!-- Settings Section -->
+    <section>
+      <h2 class="section-title">2. Compression Settings</h2>
+      <div class="controls">
+        <div class="control-group">
+          <label class="control-label" for="formatSelect">Output Format</label>
+          <select id="formatSelect">
+            <option value="image/jpeg">JPEG (photos)</option>
+            <option value="image/png">PNG (graphics, transparency)</option>
+            <option value="image/webp">WebP (modern, efficient)</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Quality</label>
+          <div class="range-wrap">
+            <input type="range" id="qualityRange" min="0.1" max="1" step="0.05" value="0.8" />
+            <div class="range-value" id="qualityValue">0.80</div>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="maxWidth">Max Width (px, optional)</label>
+          <input type="number" id="maxWidth" placeholder="e.g. 1920" />
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="maxHeight">Max Height (px, optional)</label>
+          <input type="number" id="maxHeight" placeholder="e.g. 1080" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="compressAllBtn" disabled>Compress All Images</button>
+        <button id="downloadAllBtn" class="secondary" disabled>Download All (ZIP)</button>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section>
+      <h2 class="section-title">3. Compressed Images</h2>
+      <div id="galleryWrap">
+        <div class="empty-state" id="emptyState">
+          No images yet. Upload images in Step 1 to see them here.
+        </div>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <div class="footer-title"><span id="yellow">Free</span> Image Compressor</div>
+            <p class="footer-description">
+              Compress JPEG, PNG, and WebP images locally in your browser. Fast, private, and free.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <div class="footer-heading">Product</div>
+              <ul class="footer-list">
+                <li><a target="_blank" href="https://github.com/jaiswarabhishek638/free-image-compressor" class="footer-link">Features</a></li>
+                <li><a target="_blank" href="https://github.com/jaiswarabhishek638/free-image-compressor" class="footer-link">Pricing</a></li>
+                <li><a target="_blank" href="https://github.com/jaiswarabhishek638/free-image-compressor" class="footer-link">Changelog</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <div class="footer-heading">Resources</div>
+              <ul class="footer-list">
+                <li><a target="_blank" href="https://github.com/jaiswarabhishek638/free-image-compressor" class="footer-link">Documentation</a></li>
+                <li><a target="_blank" href="https://github.com/jaiswarabhishek638/free-image-compressor" class="footer-link">Blog</a></li>
+                <li><a target="_blank" href="https://github.com/jaiswarabhishek638/free-image-compressor" class="footer-link">FAQs</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <div class="footer-heading">Legal</div>
+              <ul class="footer-list">
+                <li><a target="_blank" href="#" class="footer-link">Privacy Policy</a></li>
+                <li><a target="_blank" href="#" class="footer-link">Terms of Service</a></li>
+                <li><a target="_blank" href="#" class="footer-link">Cookie Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            &copy; <span id="currentYear"></span> Free Image Compressor. All rights reserved.
+          </div>
+          <div class="footer-social">
+            <a target="_blank" href="https://github.com/jaiswarabhishek638" class="footer-social-link" aria-label="GitHub">GitHub</a>
+            <a target="_blank" href="https://x.com/Abhishe28320848?t=k6UxiIzNaY_aNwU2bGX0sA&s=08" class="footer-social-link" aria-label="Twitter">Twitter</a>
+            <a target="_blank" href="https://www.linkedin.com/in/abhishek-jaiswar-6ba9a1270?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="footer-social-link" aria-label="Contact">Linkedin</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+   </div> 
+   <!-- Libraries for ZIP download -->
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+</html>
