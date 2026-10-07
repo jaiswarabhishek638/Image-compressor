@@ -29,7 +29,7 @@ A fast, privacy-first, client-side image compressor that runs entirely in your b
 
 If you host this repo (e.g., via GitHub Pages, Vercel, or Netlify), you can add a live demo link here:
 
-- **Demo:** [https://your-username.github.io/your-repo-name](https://your-username.github.io/your-repo-name)
+- **Demo:** [[[https:github.io/jaiswarabhishek638/Image-compressor]](https://image-compressor-by-abhishek638.vercel.app/)]
 
 
 
@@ -75,7 +75,7 @@ If you host this repo (e.g., via GitHub Pages, Vercel, or Netlify), you can add 
    - Folder: `/ (root)`
 4. Save. Your site will be available at:
    ```text
-  https://github.com/jaiswarabhishek638/free-image-compressor
+  https://github.com/jaiswarabhishek638/Image-compressor
    ```
 
 *(Optionally, rename `imagecompressor.html` to `index.html` for a cleaner URL.)*
